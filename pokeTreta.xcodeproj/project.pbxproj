@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8A4119C91E79E9C6004A704C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4119C81E79E9C6004A704C /* main.m */; };
+		8A4119D21E79EA1F004A704C /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4119D11E79EA1F004A704C /* Pokemon.m */; };
+		8A4119D51E7C4DA8004A704C /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4119D41E7C4DA8004A704C /* Jogador.m */; };
+		8A411A071E7C825C004A704C /* Ginasio.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A411A061E7C825C004A704C /* Ginasio.m */; };
+		8A411A0A1E7C8568004A704C /* Batalha.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A411A091E7C8568004A704C /* Batalha.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		8A4119C51E79E9C6004A704C /* pokeTreta */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pokeTreta; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4119C81E79E9C6004A704C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A4119D01E79EA1F004A704C /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
+		8A4119D11E79EA1F004A704C /* Pokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pokemon.m; sourceTree = "<group>"; };
+		8A4119D31E7C4DA8004A704C /* Jogador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogador.h; sourceTree = "<group>"; };
+		8A4119D41E7C4DA8004A704C /* Jogador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogador.m; sourceTree = "<group>"; };
+		8A411A051E7C825C004A704C /* Ginasio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ginasio.h; sourceTree = "<group>"; };
+		8A411A061E7C825C004A704C /* Ginasio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ginasio.m; sourceTree = "<group>"; };
+		8A411A081E7C8568004A704C /* Batalha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Batalha.h; sourceTree = "<group>"; };
+		8A411A091E7C8568004A704C /* Batalha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Batalha.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,25 @@
 		8A4119C71E79E9C6004A704C /* pokeTreta */ = {
 			isa = PBXGroup;
 			children = (
+				8A4119CF1E79E9DB004A704C /* entidades */,
 				8A4119C81E79E9C6004A704C /* main.m */,
 			);
 			path = pokeTreta;
+			sourceTree = "<group>";
+		};
+		8A4119CF1E79E9DB004A704C /* entidades */ = {
+			isa = PBXGroup;
+			children = (
+				8A4119D01E79EA1F004A704C /* Pokemon.h */,
+				8A4119D11E79EA1F004A704C /* Pokemon.m */,
+				8A4119D31E7C4DA8004A704C /* Jogador.h */,
+				8A4119D41E7C4DA8004A704C /* Jogador.m */,
+				8A411A051E7C825C004A704C /* Ginasio.h */,
+				8A411A061E7C825C004A704C /* Ginasio.m */,
+				8A411A081E7C8568004A704C /* Batalha.h */,
+				8A411A091E7C8568004A704C /* Batalha.m */,
+			);
+			name = entidades;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A4119C91E79E9C6004A704C /* main.m in Sources */,
+				8A411A0A1E7C8568004A704C /* Batalha.m in Sources */,
+				8A4119D51E7C4DA8004A704C /* Jogador.m in Sources */,
+				8A411A071E7C825C004A704C /* Ginasio.m in Sources */,
+				8A4119D21E79EA1F004A704C /* Pokemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +281,7 @@
 				8A4119CE1E79E9C6004A704C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,19 +12,19 @@
 
 @interface Jogador : NSObject{
     NSString *nome;
-    NSArray *pokemons;
+    NSMutableArray *pokemons;
     NSString *time;
     
 }
 
 //Getters
 -(NSString*)nome;
--(NSArray*)pokemons;
+-(NSMutableArray*)pokemons;
 -(NSString*)time;
 
 //Setters
 -(void)nome:(NSString*)currentNome;
--(void)pokemons: (NSArray*)currentPokemons;
+-(void)pokemons: (NSMutableArray*)currentPokemons;
 -(void)time: (NSString*)currentTime;
 
 

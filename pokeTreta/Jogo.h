@@ -28,10 +28,22 @@
 - (instancetype)initWithInformacoes;
 -(Batalha* )preparaBatalha;
 
+-(NSString *) textoMenuJogador;
+-(void) menuJogador;
+
+-(NSString *) textoMenu;
+
 -(void) jogar;
 -(void) listarPokemons;
+-(void) listarJogadores2;
 
 -(void) criarPokemons;
 -(void) criarJogadores;
+-(void) cadastrarJogador;
+
+-(Pokemon*)geraPokemonRandom;
++(int)randomicoComValorMin:(int)valorMin valorMax:(unsigned long)valorMax;
+-(Jogador*) selecionaJogador;
+-(void)listarJogadores;
 
 @end

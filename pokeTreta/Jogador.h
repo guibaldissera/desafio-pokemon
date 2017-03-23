@@ -14,20 +14,22 @@
 
 @property NSString *nome;
 @property NSMutableArray *pokemons;
-@property NSString *time;
 
 
--(instancetype)initWithNome:(NSString *)nome withTime:(NSString *)time;
+-(instancetype)initWithNome:(NSString *)nome;
 
 //Setters
 -(void)nome:(NSString*)currentNome;
 -(void)pokemons: (NSMutableArray*)currentPokemons;
--(void)time: (NSString*)currentTime;
 
+//Getters
+-(NSString*)getNome;
 
 -(void)consultarPokemons;
 -(BOOL)capturarPokemon: (Pokemon*)poke;
 -(NSMutableArray*)getMelhoresPokemons;
+-(void)apresentaJogadores;
+
 //-(void)timerAction: (int)valor;
 
 

@@ -11,10 +11,9 @@
 @implementation Jogador
 
 @synthesize nome = _nome;
-@synthesize time = _time;
 @synthesize pokemons = _pokemons;
 
--(instancetype)initWithNome:(NSString *)nome withTime:(NSString *)time {
+-(instancetype)initWithNome:(NSString *)nome {
 	self = [super init];
 	if (self) {
 		_nome = nome;
@@ -30,9 +29,6 @@
 }
 -(void)pokemons: (NSMutableArray*)currentPokemons{
     _pokemons = currentPokemons;
-}
--(void)time: (NSString*)currentTime{
-    _time = currentTime;
 }
 
 
@@ -69,7 +65,7 @@
 
 //Apresenta textualmente todos os atributos do objeto jogador
 -(void)apresentaJogadores{
-	NSLog(@"Nome: %@\nTime: %@\n", self.nome, self.time);
+	NSLog(@"Nome: %@\n", _nome);
 	NSLog(@"Pokemons: \n");
 	[self consultarPokemons];
 	

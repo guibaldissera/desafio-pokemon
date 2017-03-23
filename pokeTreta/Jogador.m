@@ -67,4 +67,12 @@
     return melhores;
 }
 
+//Apresenta textualmente todos os atributos do objeto jogador
+-(void)apresentaJogadores{
+	NSLog(@"Nome: %@\nTime: %@\n", self.nome, self.time);
+	NSLog(@"Pokemons: \n");
+	[self consultarPokemons];
+	
+}
+
 @end

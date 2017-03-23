@@ -27,6 +27,7 @@
 - (instancetype)initWithInformacoes;
 
 -(void) jogar;
+-(void) listarPokemons;
 
 -(void) criarPokemons;
 -(void) criarJogadores;

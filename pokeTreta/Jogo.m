@@ -9,6 +9,7 @@
 #import "Jogo.h"
 #import "Pokemon.h"
 #import "Jogador.h"
+#import "View.h"
 
 @implementation Jogo
 
@@ -26,15 +27,58 @@
 	return self;
 }
 
+NSString * menuJogador2 () {
+	return @"\n1-Para criar jogador.\n2-capturar pokemon.\n3-Listar pokemons de um jogador.\n0-para sair.\nInforme uma opcao:\n";
+}
+
+//Objetivo: menu de jogadores.
+//Parametro: array de jogadores.
+//Retorna: nada.
+void menuJogador() {
+	
+	int opcao;
+	
+	do{
+		opcao = [View lerInteiro:menuJogador2()];
+		
+		switch (opcao) {
+			case 1:
+				//criarJogador();
+				//jogador = @[[Utils createJogador]];
+				break;
+			case 2:
+				//capturarPokemon();
+				break;
+			case 3:
+				//ListarJogador.();
+				break;
+			default:
+				break;
+		}
+	}while(opcao != 0);
+	
+}
+
+-(void) listarPokemons {
+	for (Pokemon * p in _pokemons) {
+		[p apresentaPokemon];
+	}
+}
+
+NSString * menu () {
+	return @"1 - Menu Jogador\n2 - Listar Pokemons\n3 - Batalha\n0 - Sair\nInforme a opção: ";
+}
+
 -(void) jogar {
 	int opcao = 0;
 	do {
+		opcao = [View lerInteiro:menu()];
 		switch (opcao) {
 			case 1:
-//                menuJogador();
+                menuJogador();
 				break;
 			case 2:
-//                  listarPokemons(.);
+                  [self listarPokemons];
 				break;
 			case 3:
                 //batalha.
@@ -43,40 +87,11 @@
 			default:
 				break;
 		}
-		
-//		opcao = [self selecionaOpcaoMenu];
-	} while (opcao != 5);
+	} while (opcao != 0);
 }
 
+
 /*
-//Objetivo: menu de jogadores.
-//Parametro: array de jogadores.
-//Retorna: nada.
-void menuJogador(){
-    
-    int opcao;
-    
-    do{
-        opcao = [View lerInteiro:@"\n1-Para criar jogador.\n2-capturar pokemon.\n3-Listar pokemons de um jogador.\n0-para sair.\nInforme uma opcao:\n"];
-        
-        switch (opcao) {
-            case 1:
-                criarJogador();
-                jogador = @[[Utils createJogador]];
-                break;
-            case 2:
-                capturarPokemon();
-                break;
-            case 3:
-                ListarJogador.();
-                break;
-            default:
-                break;
-        }
-    }while(opcao!=0);
-    
-}
- 
  ------------FUNCAO CRIAR JOGADOR-----------
  //Objetivo: criar objeto jogador.
  //Parametro: nenhum.

@@ -24,22 +24,11 @@
 	return self;
 }
 
-//Getters
-//-(NSString*)nome{
-//    return _nome;
-//}
-//-(NSArray*)pokemons{
-//    return _pokemons;
-//}
-//-(NSString*)time{
-//    return _time;
-//}
-
 //Setters
 -(void)nome:(NSString*)currentNome{
     _nome = currentNome;
 }
--(void)pokemons: (NSArray*)currentPokemons{
+-(void)pokemons: (NSMutableArray*)currentPokemons{
     _pokemons = currentPokemons;
 }
 -(void)time: (NSString*)currentTime{
@@ -59,7 +48,7 @@
 -(BOOL)capturarPokemon:(Pokemon *)poke{
     int rand = arc4random_uniform(100);
     if(rand % 2 == 0){
-        [pokemons addObject:poke];
+        [_pokemons addObject:poke];
         return YES;
     }
     return NO;

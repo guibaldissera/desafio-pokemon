@@ -13,15 +13,11 @@
 @interface Jogador : NSObject
 
 @property NSString *nome;
-@property NSArray *pokemons;
+@property NSMutableArray *pokemons;
 @property NSString *time;
 
 
 -(instancetype)initWithNome:(NSString *)nome withTime:(NSString *)time;
-//Getters
-//-(NSString*)nome;
-//-(NSArray*)pokemons;
-//-(NSString*)time;
 
 //Setters
 -(void)nome:(NSString*)currentNome;

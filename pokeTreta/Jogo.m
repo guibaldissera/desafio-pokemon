@@ -10,6 +10,7 @@
 #import "Pokemon.h"
 #import "Jogador.h"
 #import "View.h"
+#import "Batalha.h"
 
 @implementation Jogo
 
@@ -71,6 +72,8 @@ NSString * menu () {
 
 -(void) jogar {
 	int opcao = 0;
+    Batalha* batalha;
+    Jogador* jogadorVencedor;
 	do {
 		opcao = [View lerInteiro:menu()];
 		switch (opcao) {
@@ -81,13 +84,42 @@ NSString * menu () {
                   [self listarPokemons];
 				break;
 			case 3:
-                //batalha.
-//				gerarAcaoBatalha();
+                batalha = [self preparaBatalha];
+                jogadorVencedor = [batalha batalharJogador];
+                NSLog(@"O jogador vencedor e: %@", [jogadorVencedor nome]);
 				break;
 			default:
 				break;
 		}
 	} while (opcao != 0);
+}
+
+
+-(Batalha*)preparaBatalha{
+    int optionJogador = -1;
+    int optionGinasio = -1;
+    do{
+        optionJogador = [View lerInteiro:@"Informe o jogador que vai desafiar um ginasio:"];
+        for(int i = 0; i < [_jogadores count]; i++){
+            NSLog(@"%d Jogador : %@", i, [_jogadores[i] nome]);
+        }
+        
+    }while(optionJogador < 0 || optionJogador >= [_jogadores count]);
+    NSLog(@"Informe o ginasio que deseja batalhar");
+    
+    do{
+        optionGinasio = [View lerInteiro:@"Informe o ginasio que vai desafiar:"];
+        for(int i = 0; i < [_ginasios count]; i++){
+            NSLog(@"%d Ginasio : %@", i, [_ginasios[i] nome]);
+        }
+        scanf("%d",&optionGinasio);
+    }while(optionGinasio < 0 || optionGinasio >= [_ginasios count]);
+    
+    Batalha *batalha = [[Batalha alloc]initWithGinasio:_ginasios[optionGinasio] Desafiante:_jogadores[optionJogador]];
+    
+    return batalha;
+    
+    
 }
 
 

@@ -15,6 +15,9 @@
 @property(retain) Jogador* jogador;
 @property(retain) NSString* nome;
 
+
+- (instancetype)initWithNome: (NSString*)newNome Jogador:(Jogador*)newJogador;
+
 -(void)mudaJogadorLider: (Jogador*)lider;
 
 

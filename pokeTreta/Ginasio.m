@@ -10,11 +10,12 @@
 
 @implementation Ginasio
 
-- (instancetype)initWithNome: (NSString*)newNome
+- (instancetype)initWithNome: (NSString*)newNome Jogador:(Jogador*)newJogador
 {
     self = [super init];
     if (self) {
         self.nome = newNome;
+        self.jogador = newJogador;
     }
     return self;
 }

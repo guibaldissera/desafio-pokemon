@@ -19,8 +19,22 @@
 @synthesize ginasio;
 @synthesize desafiante;
 
+- (instancetype)initWithGinasio: (Ginasio*) newGinasio Desafiante: (Jogador*) newJogador
+{
+    self = [super init];
+    if (self) {
+        self.ginasio = newGinasio;
+        self.desafiante = newJogador;
+    }
+    return self;
+}
+
 //Inicia uma batalha entre um jogador desafiante e um jogador que e lider do ginasio
 -(Jogador*)batalharJogador{
+    if([ginasio jogador] == NULL){
+        [ginasio mudaJogadorLider:self.desafiante];
+        return desafiante;
+    }
     NSMutableArray* melhoresPokemonsDesafiante = [desafiante getMelhoresPokemons];
     NSMutableArray* melhoresPokemonsLider = [ginasio.jogador getMelhoresPokemons];
     NSMutableArray* pokemonsVencedores = [[NSMutableArray alloc] init];

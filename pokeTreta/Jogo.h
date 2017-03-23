@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Batalha.h"
 
 #define TIPO_AGUA "agua"
 #define TIPO_FOGO "fogo"
@@ -25,6 +26,7 @@
 
 
 - (instancetype)initWithInformacoes;
+-(Batalha* )preparaBatalha;
 
 -(void) jogar;
 -(void) listarPokemons;

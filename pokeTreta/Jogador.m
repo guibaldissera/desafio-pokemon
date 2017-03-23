@@ -19,7 +19,7 @@
 	if (self) {
 		_nome = nome;
 		_time = time;
-		_pokemons = NULL;
+		_pokemons = [[NSMutableArray alloc]init];
 	}
 	return self;
 }

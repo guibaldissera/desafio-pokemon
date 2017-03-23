@@ -34,6 +34,10 @@
 -(void)time: (NSString*)currentTime{
     _time = currentTime;
 }
+//GETTERS
+-(NSString*)getNome{
+    return  self.nome;
+}
 
 
 //Chama o metodo que apresenta os atributos do pokemon para cada pokemon do jogador

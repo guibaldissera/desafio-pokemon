@@ -24,6 +24,8 @@
 -(void)pokemons: (NSMutableArray*)currentPokemons;
 -(void)time: (NSString*)currentTime;
 
+//Getters
+-(NSString*)getNome;
 
 -(void)consultarPokemons;
 -(BOOL)capturarPokemon: (Pokemon*)poke;

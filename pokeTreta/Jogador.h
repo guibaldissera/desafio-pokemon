@@ -10,17 +10,18 @@
 #import "Pokemon.h"
 
 
-@interface Jogador : NSObject{
-    NSString *nome;
-    NSArray *pokemons;
-    NSString *time;
-    
-}
+@interface Jogador : NSObject
 
+@property NSString *nome;
+@property NSArray *pokemons;
+@property NSString *time;
+
+
+-(instancetype)initWithNome:(NSString *)nome withTime:(NSString *)time;
 //Getters
--(NSString*)nome;
--(NSArray*)pokemons;
--(NSString*)time;
+//-(NSString*)nome;
+//-(NSArray*)pokemons;
+//-(NSString*)time;
 
 //Setters
 -(void)nome:(NSString*)currentNome;

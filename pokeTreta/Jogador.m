@@ -10,27 +10,40 @@
 
 @implementation Jogador
 
+@synthesize nome = _nome;
+@synthesize time = _time;
+@synthesize pokemons = _pokemons;
+
+-(instancetype)initWithNome:(NSString *)nome withTime:(NSString *)time {
+	self = [super init];
+	if (self) {
+		_nome = nome;
+		_time = time;
+		_pokemons = NULL;
+	}
+	return self;
+}
 
 //Getters
--(NSString*)nome{
-    return nome;
-}
--(NSArray*)pokemons{
-    return pokemons;
-}
--(NSString*)time{
-    return time;
-}
+//-(NSString*)nome{
+//    return _nome;
+//}
+//-(NSArray*)pokemons{
+//    return _pokemons;
+//}
+//-(NSString*)time{
+//    return _time;
+//}
 
 //Setters
 -(void)nome:(NSString*)currentNome{
-    nome = currentNome;
+    _nome = currentNome;
 }
 -(void)pokemons: (NSArray*)currentPokemons{
-    pokemons = currentPokemons;
+    _pokemons = currentPokemons;
 }
 -(void)time: (NSString*)currentTime{
-    time = currentTime;
+    _time = currentTime;
 }
 
 -(void)consultarPokemons{

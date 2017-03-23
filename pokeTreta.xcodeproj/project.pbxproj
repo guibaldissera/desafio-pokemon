@@ -12,6 +12,7 @@
 		8A4119D51E7C4DA8004A704C /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4119D41E7C4DA8004A704C /* Jogador.m */; };
 		8A411A071E7C825C004A704C /* Ginasio.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A411A061E7C825C004A704C /* Ginasio.m */; };
 		8A411A0A1E7C8568004A704C /* Batalha.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A411A091E7C8568004A704C /* Batalha.m */; };
+		BDDAC1FD1E843ABB003B82D7 /* Jogo.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDAC1FC1E843ABB003B82D7 /* Jogo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		8A411A061E7C825C004A704C /* Ginasio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ginasio.m; sourceTree = "<group>"; };
 		8A411A081E7C8568004A704C /* Batalha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Batalha.h; sourceTree = "<group>"; };
 		8A411A091E7C8568004A704C /* Batalha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Batalha.m; sourceTree = "<group>"; };
+		BDDAC1FB1E843ABB003B82D7 /* Jogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogo.h; sourceTree = "<group>"; };
+		BDDAC1FC1E843ABB003B82D7 /* Jogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				8A411A061E7C825C004A704C /* Ginasio.m */,
 				8A411A081E7C8568004A704C /* Batalha.h */,
 				8A411A091E7C8568004A704C /* Batalha.m */,
+				BDDAC1FB1E843ABB003B82D7 /* Jogo.h */,
+				BDDAC1FC1E843ABB003B82D7 /* Jogo.m */,
 			);
 			name = entidades;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDDAC1FD1E843ABB003B82D7 /* Jogo.m in Sources */,
 				8A4119C91E79E9C6004A704C /* main.m in Sources */,
 				8A411A0A1E7C8568004A704C /* Batalha.m in Sources */,
 				8A4119D51E7C4DA8004A704C /* Jogador.m in Sources */,

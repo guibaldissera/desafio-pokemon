@@ -16,6 +16,8 @@
     
 }
 
+- (instancetype)initWithNome: (NSString*)newNome withExp:(int) newExp withTipo: (NSString*) newTipo;
+
 //Getters
 -(NSString*)nome;
 -(int)exp;

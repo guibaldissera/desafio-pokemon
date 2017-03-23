@@ -11,8 +11,7 @@
 @implementation Pokemon
 
 
-- (instancetype)initWithNome: (NSString*)newNome withExp:(int) newExp withTipo: (NSString*) newTipo
-{
+- (instancetype)initWithNome: (NSString*)newNome withExp:(int) newExp withTipo: (NSString*) newTipo{
     self = [super init];
     if (self) {
         self.nome = newNome;
@@ -56,6 +55,5 @@
 -(void)apresentaPokemon{
     NSLog(@"Nome: %@\nExperiencia: %d\nTipo: %@\nLevel: %d", self.nome, self.exp, self.tipo, [self getLevel:self.exp]);
 }
-
 
 @end

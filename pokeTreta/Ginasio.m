@@ -22,6 +22,8 @@
 @synthesize nome =_nome;
 @synthesize jogador=_jogador;
 
+
+//Troca o lider do ginasio
 -(void)mudaJogadorLider:(Jogador *)lider{
     self.jogador = lider;
 }

@@ -25,7 +25,7 @@
 
 //Setters
 -(void)nome:(NSString*)currentNome;
--(void)pokemons: (NSArray*)currentPokemons;
+-(void)pokemons: (NSMutableArray*)currentPokemons;
 -(void)time: (NSString*)currentTime;
 
 

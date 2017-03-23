@@ -28,7 +28,7 @@
 }
 
 -(NSString *) textoMenuJogador {
-	return @"\n1-Para criar jogador.\n2-capturar pokemon.\n3-Listar jogadores.\n0-para sair.\nInforme uma opcao:\n";
+	return @"\n1 - Para criar jogador.\n2 - Capturar pokemon.\n3 - Listar jogadores.\n0 - Sair.\nInforme uma opcao: \n";
 }
 
 //Objetivo: menu de jogadores.
@@ -40,17 +40,27 @@
 	
 	do{
 		opcao = [View lerInteiro:[self textoMenuJogador]];
-		
+		Jogador * j = [[Jogador alloc]init];
+		Pokemon * p;
 		switch (opcao) {
 			case 1:
 				[self cadastrarJogador];
 				break;
 			case 2:
-//                aux = [self];
-                
+				j = [self selecionaJogador];
+				
+				p = [self geraPokemonRandom];
+				
+				NSLog(@"%@ encontrou o pokemon %@", j.nome, p.nome);
+				if ([j capturarPokemon: p]) {
+					NSLog(@"Conseguiu capturar o pokemon.");
+				} else {
+					NSLog(@"Não conseguiu capturar o pokemon.");
+				}
+				
 				break;
 			case 3:
-				[self listarJogadores];
+				[self listarJogadores2];
 				break;
 			default:
 				break;
@@ -83,47 +93,6 @@
 		}
 	} while (opcao != 0);
 }
-
-
-/*
- ------------FUNCAO CRIAR JOGADOR-----------
- //Objetivo: criar objeto jogador.
- //Parametro: nenhum.
- //Retorna: objeto instanciado.
- +(Jogador*)createJogador{
- 
- Jogador *currentJogador = [[Jogador alloc]initWithNome:[View lerString:@"Informe o nome do jogador:\n"] time: [Utils geraTimeJogador]];
- 
- return currentJogador;
- }
- 
- //Objetivo: gerar time do jogador.
- //Parametro: nenhum.
- //Retorna: time escolhido.
- +(NSString*)geraTimeJogador{
- 
- NSString*retorna;
- int opcao;
- 
- opcao = [Utils randomicoComValorMin:1 valorMax:3];
- switch (opcao) {
- case 1:
- retorna = @"Azul";
- break;
- case 2:
- retorna = @"Vermelho";
- break;
- case 3:
- retorna = @"Amarelo";
- break;
- }
- return retorna;
- }
-
- 
- 
-*/
-
 
 
 // Criar um array de pokemons
@@ -187,10 +156,59 @@
 	}
 }
 
--(void) listarJogadores {
+-(void) listarJogadores2 {
 	for (Jogador * j in _jogadores) {
 		[j apresentaJogadores];
 	}
+}
+
+-(Pokemon*)geraPokemonRandom{
+ 
+	return _pokemons[[Jogo randomicoComValorMin:0 valorMax: (unsigned long)[_pokemons count]]];
+}
+
+//Objetivo: metodo para gerar valor randomico.
+//Parametro: valor minimo e valor maximo.
+//Retorna: inteiro validado.
++(int)randomicoComValorMin:(int)valorMin valorMax:(unsigned long)valorMax{
+	
+	int r;
+	
+	do{
+		r = rand() %100;
+	}while (r<valorMin || r>valorMax);
+	return r;
+}
+
+
+//Objetivo: Seleciona Jogador.
+//Parametro:Array de jogadores
+//Retorna: Jogador selecionado.
+-(Jogador*) selecionaJogador {
+	
+	int id;
+	
+	[self listarJogadores];
+	id = [View lerInteiro:@"Informe o id do jogador: \n"];
+	
+	return _jogadores[id-1];
+}
+//Objetivo: listar jogadores.
+//Parametro: array de jogadores.
+//Retorna: nenhum.
+-(void)listarJogadores{
+	int i;
+	Jogador *auxPlayer = [[Jogador alloc]init];
+//	NSString *allJogadores=@"";
+	
+	for(i=0;i< [_jogadores count];i++){
+		auxPlayer = _jogadores[i];
+		
+		NSLog(@"%d - nome: %@ \n", i+1,[_jogadores[i] nome]);
+//		allJogadores = [NSString stringWithFormat:@"%d - nome: %@ \n",i+1,[_jogadores[i] nome]];
+	}
+	
+//	NSLog(@"%@",allJogadores);
 }
 
 @end

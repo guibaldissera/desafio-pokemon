@@ -35,7 +35,7 @@
 
 -(void) jogar;
 -(void) listarPokemons;
--(void) listarJogadores;
+-(void) listarJogadores2;
 
 -(void) criarPokemons;
 -(void) criarJogadores;
@@ -43,7 +43,7 @@
 
 -(Pokemon*)geraPokemonRandom;
 +(int)randomicoComValorMin:(int)valorMin valorMax:(unsigned long)valorMax;
--(Jogador*) selecionaJogador:(NSArray*)jogadores;
--(void)listarJogadores:(NSArray*)jogadores;
+-(Jogador*) selecionaJogador;
+-(void)listarJogadores;
 
 @end

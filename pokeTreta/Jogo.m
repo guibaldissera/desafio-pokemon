@@ -24,6 +24,7 @@
 	if (self) {
 		[self criarPokemons];
 		[self criarJogadores];
+        [self criarGinasios];
 	}
 	return self;
 }
@@ -103,20 +104,20 @@
     int optionJogador = -1;
     int optionGinasio = -1;
     do{
-        optionJogador = [View lerInteiro:@"Informe o jogador que vai desafiar um ginasio:"];
+        
         for(int i = 0; i < [_jogadores count]; i++){
             NSLog(@"%d Jogador : %@", i, [_jogadores[i] nome]);
         }
-        
+        optionJogador = [View lerInteiro:@"Informe o jogador que vai desafiar um ginasio:"];
     }while(optionJogador < 0 || optionJogador >= [_jogadores count]);
     NSLog(@"Informe o ginasio que deseja batalhar");
     
     do{
-        optionGinasio = [View lerInteiro:@"Informe o ginasio que vai desafiar:"];
+        
         for(int i = 0; i < [_ginasios count]; i++){
             NSLog(@"%d Ginasio : %@", i, [_ginasios[i] nome]);
         }
-        scanf("%d",&optionGinasio);
+        optionGinasio = [View lerInteiro:@"Informe o ginasio que vai desafiar:"];
     }while(optionGinasio < 0 || optionGinasio >= [_ginasios count]);
     
     Batalha *batalha = [[Batalha alloc]initWithGinasio:_ginasios[optionGinasio] Desafiante:_jogadores[optionJogador]];
@@ -173,12 +174,18 @@
 	
 	const NSArray * pokemonsNames = @[
 									  @"Pikachu",
-									  @"Chalizard"
+									  @"Charizard",
+                                      @"Entei",
+                                      @"Blastoise",
+                                      @"pidgey"
 									 ];
 	
 	const NSArray * pokemonsTypes = @[
 									  @TIPO_VENTO,
-									  @TIPO_AGUA
+									  @TIPO_AGUA,
+                                       @TIPO_FOGO,
+                                       @TIPO_AGUA,
+                                       @TIPO_VENTO
 									 ];
 	
 	_pokemons = [[NSMutableArray alloc]init];
@@ -211,6 +218,26 @@
 		[_jogadores addObject:j];
 	}
 }
+
+// Criar um array de pokemons
+-(void) criarGinasios {
+    
+    const NSArray * ginasiosNames = @[
+                                      @"BEPiD",
+                                      @"Coca-cola",
+                                      @"Metrô",
+                                      @"Casa das Prima",
+                                      @"American Show"
+                                      ];
+    
+    _ginasios = [[NSMutableArray alloc]init];
+    
+    for (int index = 0; index < [ginasiosNames count]; index++) {
+        Ginasio * g = [[Ginasio alloc]initWithNome:ginasiosNames[index] Jogador:NULL];
+        [_ginasios addObject:g];
+    }
+}
+
 
 -(void) cadastrarJogador {
 	

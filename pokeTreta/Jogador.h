@@ -22,9 +22,6 @@
 -(void)nome:(NSString*)currentNome;
 -(void)pokemons: (NSMutableArray*)currentPokemons;
 
-//Getters
--(NSString*)getNome;
-
 -(void)consultarPokemons;
 -(BOOL)capturarPokemon: (Pokemon*)poke;
 -(NSMutableArray*)getMelhoresPokemons;

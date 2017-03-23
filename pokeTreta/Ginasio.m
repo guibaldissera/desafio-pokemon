@@ -10,6 +10,10 @@
 
 @implementation Ginasio
 
+
+@synthesize nome =_nome;
+@synthesize jogador=_jogador;
+
 - (instancetype)initWithNome: (NSString*)newNome Jogador:(Jogador*)newJogador
 {
     self = [super init];
@@ -19,10 +23,6 @@
     }
     return self;
 }
-
-@synthesize nome =_nome;
-@synthesize jogador=_jogador;
-
 
 //Troca o lider do ginasio
 -(void)mudaJogadorLider:(Jogador *)lider{

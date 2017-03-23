@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Pokemon.h"
+#import "Jogador.h"
 #import "Batalha.h"
 
 #define TIPO_AGUA "agua"

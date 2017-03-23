@@ -27,30 +27,29 @@
 	return self;
 }
 
-NSString * menuJogador2 () {
-	return @"\n1-Para criar jogador.\n2-capturar pokemon.\n3-Listar pokemons de um jogador.\n0-para sair.\nInforme uma opcao:\n";
+-(NSString *) textoMenuJogador {
+	return @"\n1-Para criar jogador.\n2-capturar pokemon.\n3-Listar jogadores.\n0-para sair.\nInforme uma opcao:\n";
 }
 
 //Objetivo: menu de jogadores.
 //Parametro: array de jogadores.
 //Retorna: nada.
-void menuJogador() {
+-(void) menuJogador {
 	
 	int opcao;
 	
 	do{
-		opcao = [View lerInteiro:menuJogador2()];
+		opcao = [View lerInteiro:[self textoMenuJogador]];
 		
 		switch (opcao) {
 			case 1:
-				//criarJogador();
-				//jogador = @[[Utils createJogador]];
+				[self cadastrarJogador];
 				break;
 			case 2:
 				//capturarPokemon();
 				break;
 			case 3:
-				//ListarJogador.();
+				[self listarJogadores];
 				break;
 			default:
 				break;
@@ -59,23 +58,17 @@ void menuJogador() {
 	
 }
 
--(void) listarPokemons {
-	for (Pokemon * p in _pokemons) {
-		[p apresentaPokemon];
-	}
-}
-
-NSString * menu () {
+-(NSString *) textoMenu {
 	return @"1 - Menu Jogador\n2 - Listar Pokemons\n3 - Batalha\n0 - Sair\nInforme a opção: ";
 }
 
 -(void) jogar {
 	int opcao = 0;
 	do {
-		opcao = [View lerInteiro:menu()];
+		opcao = [View lerInteiro:[self textoMenu]];
 		switch (opcao) {
 			case 1:
-                menuJogador();
+                [self menuJogador];
 				break;
 			case 2:
                   [self listarPokemons];
@@ -163,22 +156,39 @@ NSString * menu () {
 									   @"Gabriel Souza"
 									   ];
 	
-	const NSArray * jogadoresTimes = @[
-									   @TIME_AMARELO,
-										@TIME_VERMELHO,
-										@TIME_AZUL
-										];
-	
 	_jogadores = [[NSMutableArray alloc]init];
 	
 	for (int index = 0; index < [jogadoresNames count]; index++) {
-		Jogador * j = [[Jogador alloc]initWithNome:jogadoresNames[index] withTime:jogadoresTimes[index]];
+		Jogador * j = [[Jogador alloc]initWithNome:jogadoresNames[index]];
 		
 		NSMutableArray * pokemonsDoJogador = [[NSMutableArray alloc]initWithArray:_pokemons];
 		
 		[j pokemons:pokemonsDoJogador];
 		
 		[_jogadores addObject:j];
+	}
+}
+
+-(void) cadastrarJogador {
+	
+	NSString * nome = [View lerString:@"Insira o nome do jogador: "];
+	
+	while ([nome length] == 0) {
+		nome = [View lerString:@"É necessário o nome para o Jogador.\nInsira o nome do jogador: "];
+	}
+	
+	[_jogadores addObject: [[Jogador alloc]initWithNome:nome]];
+}
+
+-(void) listarPokemons {
+	for (Pokemon * p in _pokemons) {
+		[p apresentaPokemon];
+	}
+}
+
+-(void) listarJogadores {
+	for (Jogador * j in _jogadores) {
+		[j apresentaJogadores];
 	}
 }
 

@@ -26,10 +26,17 @@
 
 - (instancetype)initWithInformacoes;
 
+-(NSString *) textoMenuJogador;
+-(void) menuJogador;
+
+-(NSString *) textoMenu;
+
 -(void) jogar;
 -(void) listarPokemons;
+-(void) listarJogadores;
 
 -(void) criarPokemons;
 -(void) criarJogadores;
+-(void) cadastrarJogador;
 
 @end

@@ -14,14 +14,10 @@
 //Parametro: mensagem.
 //Retorna: string.
 +(NSString*)lerString:(NSString*)msg{
-    
-    char str[20];
-    
-    NSLog(@"%@", msg);
-    fgets(str,20,stdin);
-    
-    
-    return [NSString stringWithUTF8String:str];
+	@autoreleasepool {
+		NSLog(@"%@", msg);
+		return [[[NSString alloc] initWithData:[[NSFileHandle fileHandleWithStandardInput] availableData] encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+	}
 }
 
 

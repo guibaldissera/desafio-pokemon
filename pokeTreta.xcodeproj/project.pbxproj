@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5971FB4B1E846DD000F0FE3A /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5971FB4A1E846DD000F0FE3A /* View.m */; };
 		8A4119C91E79E9C6004A704C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4119C81E79E9C6004A704C /* main.m */; };
 		8A4119D21E79EA1F004A704C /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4119D11E79EA1F004A704C /* Pokemon.m */; };
 		8A4119D51E7C4DA8004A704C /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4119D41E7C4DA8004A704C /* Jogador.m */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5971FB4A1E846DD000F0FE3A /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
+		5971FB4C1E846DD800F0FE3A /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		8A4119C51E79E9C6004A704C /* pokeTreta */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pokeTreta; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4119C81E79E9C6004A704C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A4119D01E79EA1F004A704C /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		8A4119CF1E79E9DB004A704C /* entidades */ = {
 			isa = PBXGroup;
 			children = (
+				5971FB4C1E846DD800F0FE3A /* View.h */,
+				5971FB4A1E846DD000F0FE3A /* View.m */,
 				8A4119D01E79EA1F004A704C /* Pokemon.h */,
 				8A4119D11E79EA1F004A704C /* Pokemon.m */,
 				8A4119D31E7C4DA8004A704C /* Jogador.h */,
@@ -153,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5971FB4B1E846DD000F0FE3A /* View.m in Sources */,
 				BDDAC1FD1E843ABB003B82D7 /* Jogo.m in Sources */,
 				8A4119C91E79E9C6004A704C /* main.m in Sources */,
 				8A411A0A1E7C8568004A704C /* Batalha.m in Sources */,

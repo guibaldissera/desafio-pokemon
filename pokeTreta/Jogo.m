@@ -31,19 +31,15 @@
 	do {
 		switch (opcao) {
 			case 1:
-				
-//				[self controlarPokemon];
+//                menuJogador();
 				break;
 			case 2:
-//				[self controlarJogador];
+//                  listarPokemons(.);
 				break;
 			case 3:
-//				[self controlarGinasio];
+                //batalha.
+//				gerarAcaoBatalha();
 				break;
-			case 4:
-				//				gerarAcaoBatalha();
-				break;
-				
 			default:
 				break;
 		}
@@ -51,6 +47,74 @@
 //		opcao = [self selecionaOpcaoMenu];
 	} while (opcao != 5);
 }
+
+/*
+//Objetivo: menu de jogadores.
+//Parametro: array de jogadores.
+//Retorna: nada.
+void menuJogador(){
+    
+    int opcao;
+    
+    do{
+        opcao = [View lerInteiro:@"\n1-Para criar jogador.\n2-capturar pokemon.\n3-Listar pokemons de um jogador.\n0-para sair.\nInforme uma opcao:\n"];
+        
+        switch (opcao) {
+            case 1:
+                criarJogador();
+                jogador = @[[Utils createJogador]];
+                break;
+            case 2:
+                capturarPokemon();
+                break;
+            case 3:
+                ListarJogador.();
+                break;
+            default:
+                break;
+        }
+    }while(opcao!=0);
+    
+}
+ 
+ ------------FUNCAO CRIAR JOGADOR-----------
+ //Objetivo: criar objeto jogador.
+ //Parametro: nenhum.
+ //Retorna: objeto instanciado.
+ +(Jogador*)createJogador{
+ 
+ Jogador *currentJogador = [[Jogador alloc]initWithNome:[View lerString:@"Informe o nome do jogador:\n"] time: [Utils geraTimeJogador]];
+ 
+ return currentJogador;
+ }
+ 
+ //Objetivo: gerar time do jogador.
+ //Parametro: nenhum.
+ //Retorna: time escolhido.
+ +(NSString*)geraTimeJogador{
+ 
+ NSString*retorna;
+ int opcao;
+ 
+ opcao = [Utils randomicoComValorMin:1 valorMax:3];
+ switch (opcao) {
+ case 1:
+ retorna = @"Azul";
+ break;
+ case 2:
+ retorna = @"Vermelho";
+ break;
+ case 3:
+ retorna = @"Amarelo";
+ break;
+ }
+ return retorna;
+ }
+
+ 
+ 
+*/
+
 
 
 // Criar um array de pokemons

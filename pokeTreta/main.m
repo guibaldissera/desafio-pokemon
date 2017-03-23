@@ -15,7 +15,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 		Jogo * j = [[Jogo alloc]initWithInformacoes];
-		
+
 		[j jogar];
     }
     return 0;

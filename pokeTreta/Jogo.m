@@ -46,7 +46,8 @@
 				[self cadastrarJogador];
 				break;
 			case 2:
-				//capturarPokemon();
+//                aux = [self];
+                
 				break;
 			case 3:
 				[self listarJogadores];

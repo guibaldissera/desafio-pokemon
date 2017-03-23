@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Pokemon.h"
+#import "Jogador.h"
 
 #define TIPO_AGUA "agua"
 #define TIPO_FOGO "fogo"
@@ -38,5 +40,10 @@
 -(void) criarPokemons;
 -(void) criarJogadores;
 -(void) cadastrarJogador;
+
+-(Pokemon*)geraPokemonRandom;
++(int)randomicoComValorMin:(int)valorMin valorMax:(unsigned long)valorMax;
+-(Jogador*) selecionaJogador:(NSArray*)jogadores;
+-(void)listarJogadores:(NSArray*)jogadores;
 
 @end

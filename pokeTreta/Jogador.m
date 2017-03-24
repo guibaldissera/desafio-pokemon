@@ -22,14 +22,6 @@
 	return self;
 }
 
-//Setters
--(void)nome:(NSString*)currentNome{
-    _nome = currentNome;
-}
--(void)pokemons: (NSMutableArray*)currentPokemons{
-    _pokemons = currentPokemons;
-}
-
 
 //Chama o metodo que apresenta os atributos do pokemon para cada pokemon do jogador
 -(void)consultarPokemons{

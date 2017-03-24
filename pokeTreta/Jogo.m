@@ -219,9 +219,9 @@
 	for (int index = 0; index < [jogadoresNames count]; index++) {
 		Jogador * j = [[Jogador alloc]initWithNome:jogadoresNames[index]];
 		
-		NSMutableArray * pokemonsDoJogador = [[NSMutableArray alloc]initWithArray:_pokemons];
+//		NSMutableArray * pokemonsDoJogador = [[NSMutableArray alloc]initWithArray:_pokemons];
 		
-		[j pokemons:pokemonsDoJogador];
+//		[j pokemons:pokemonsDoJogador];
 		
 		[_jogadores addObject:j];
 	}
@@ -272,7 +272,7 @@
 
 -(Pokemon*)geraPokemonRandom{
  
-	return _pokemons[[Jogo randomicoComValorMin:0 valorMax: (unsigned long)[_pokemons count]]];
+	return _pokemons[[Jogo randomicoComValorMin:0 valorMax: (unsigned long)[_pokemons count] - 1]];
 }
 
 //Objetivo: metodo para gerar valor randomico.
@@ -283,8 +283,8 @@
 	int r;
 	
 	do{
-		r = rand() %100;
-	}while (r<valorMin || r>valorMax);
+		r = arc4random() % 100;
+	}while (r < valorMin || r > valorMax);
 	return r;
 }
 

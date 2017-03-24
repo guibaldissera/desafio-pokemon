@@ -18,9 +18,6 @@
 
 -(instancetype)initWithNome:(NSString *)nome;
 
-//Setters
--(void)nome:(NSString*)currentNome;
--(void)pokemons: (NSMutableArray*)currentPokemons;
 
 -(void)consultarPokemons;
 -(BOOL)capturarPokemon: (Pokemon*)poke;

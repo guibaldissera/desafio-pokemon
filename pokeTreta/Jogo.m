@@ -90,9 +90,13 @@
 				break;
 			case 3:
                 batalha = [self preparaBatalha];
+                if(batalha){
                 jogadorVencedor = [batalha batalharJogador];
                 NSLog(@"O jogador vencedor e: %@", [jogadorVencedor nome]);
-				break;
+                }else{
+                    NSLog(@"A batalha nao pode ser feita, os jogadores nao possuem pokemons o suficiente");
+                }
+                break;
 			default:
 				break;
 		}
@@ -119,6 +123,10 @@
         }
         optionGinasio = [View lerInteiro:@"Informe o ginasio que vai desafiar:"];
     }while(optionGinasio < 0 || optionGinasio >= [_ginasios count]);
+    
+    if([[[_ginasios[optionGinasio] jogador] pokemons] count] < 3 || [[_jogadores[optionJogador] pokemons] count] < 3){
+        return NULL;
+    }
     
     Batalha *batalha = [[Batalha alloc]initWithGinasio:_ginasios[optionGinasio] Desafiante:_jogadores[optionJogador]];
     

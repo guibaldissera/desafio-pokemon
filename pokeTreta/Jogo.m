@@ -272,7 +272,11 @@
 
 -(Pokemon*)geraPokemonRandom{
  
-	return _pokemons[[Jogo randomicoComValorMin:0 valorMax: (unsigned long)[_pokemons count] - 1]];
+	Pokemon * pAuxiliar = _pokemons[[Jogo randomicoComValorMin:0 valorMax: (unsigned long)[_pokemons count] - 1]];
+	
+	Pokemon * p = [[Pokemon alloc]initWithNome:pAuxiliar.nome withExp:0 withTipo:pAuxiliar.tipo];
+	
+	return p;
 }
 
 //Objetivo: metodo para gerar valor randomico.

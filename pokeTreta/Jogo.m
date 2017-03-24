@@ -124,7 +124,7 @@
         optionGinasio = [View lerInteiro:@"Informe o ginasio que vai desafiar:"];
     }while(optionGinasio < 0 || optionGinasio >= [_ginasios count]);
     
-    if([[[_ginasios[optionGinasio] jogador] pokemons] count] < 3 || [[_jogadores[optionJogador] pokemons] count] < 3){
+    if(([[[_ginasios[optionGinasio] jogador] pokemons] count] < 3 || [[_jogadores[optionJogador] pokemons] count] < 3) && [_ginasios[optionGinasio] jogador] != NULL){
         return NULL;
     }
     

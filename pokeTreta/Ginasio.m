@@ -18,7 +18,7 @@
 {
     self = [super init];
     if (self) {
-        self.nome = newNome;
+        _nome = newNome;
         self.jogador = newJogador;
     }
     return self;

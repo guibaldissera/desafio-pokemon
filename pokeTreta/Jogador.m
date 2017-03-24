@@ -41,6 +41,9 @@
 //Retorna um boolean idicando se o pokemon passado como parametro foi capturado, ou nao. Se ele foi capturado, o mesmo e adicionado
 //a lista de pokemons do jogador
 -(BOOL)capturarPokemon:(Pokemon *)poke{
+    if([self.pokemons count] >= 5){
+        return NO;
+    }
     int rand = arc4random_uniform(100);
     if(rand % 2 == 0){
         [_pokemons addObject:poke];

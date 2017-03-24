@@ -62,6 +62,12 @@
 
 //Faz o duelo entre 2 pokemons
 -(Pokemon*)dueloPokemon:(Pokemon *)poke1 desafiante:(Pokemon *)poke2{
+    
+    if([poke1 isEqual: poke2]){
+        NSLog(@"ERRO POKEMON, OS POKEMONS TEM A MESMA REFERENCIA");
+        return NULL;
+    }
+    
     int diferencaDeLevel = [poke1 getLevel:poke1.exp]-[poke2 getLevel:poke2.exp];
     //Se a diferenca de level for maior que 3, o que tiver maior level ganha
     //A experiencia tambem e alterada

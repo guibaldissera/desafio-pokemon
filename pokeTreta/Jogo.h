@@ -26,26 +26,32 @@
 @property NSMutableArray * ginasios;
 @property NSMutableArray * batalhas;
 
-
+#pragma mark - Constructor
 - (instancetype)initWithInformacoes;
--(Batalha* )preparaBatalha;
 
+#pragma mark - Menu Methods
 -(NSString *) textoMenuJogador;
--(void) menuJogador;
-
 -(NSString *) textoMenu;
 
+#pragma mark - Control Menu Methods
+-(void) menuJogador;
 -(void) jogar;
+
+#pragma mark - List Methods
 -(void) listarPokemons;
+-(void)listarJogadores;
 -(void) listarJogadores2;
 
+#pragma mark - Create Itens Methods
 -(void) criarPokemons;
 -(void) criarJogadores;
+-(void) criarGinasios;
 -(void) cadastrarJogador;
+-(Batalha* )preparaBatalha;
 
+#pragma mark - Other Methods
 -(Pokemon*)geraPokemonRandom;
-+(int)randomicoComValorMin:(int)valorMin valorMax:(unsigned long)valorMax;
 -(Jogador*) selecionaJogador;
--(void)listarJogadores;
++(int)randomicoComValorMin:(int)valorMin valorMax:(unsigned long)valorMax;
 
 @end

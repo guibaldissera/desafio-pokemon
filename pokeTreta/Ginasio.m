@@ -14,6 +14,7 @@
 @synthesize nome =_nome;
 @synthesize jogador=_jogador;
 
+#pragma mark - Constructor
 - (instancetype)initWithNome: (NSString*)newNome Jogador:(Jogador*)newJogador
 {
     self = [super init];
@@ -23,6 +24,8 @@
     }
     return self;
 }
+
+#pragma mark - Other Methods
 
 //Troca o lider do ginasio
 -(void)mudaJogadorLider:(Jogador *)lider{

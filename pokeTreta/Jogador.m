@@ -13,6 +13,7 @@
 @synthesize nome = _nome;
 @synthesize pokemons = _pokemons;
 
+#pragma mark - Constructor
 -(instancetype)initWithNome:(NSString *)nome {
 	self = [super init];
 	if (self) {
@@ -22,7 +23,7 @@
 	return self;
 }
 
-
+#pragma mark - Other Methods
 //Chama o metodo que apresenta os atributos do pokemon para cada pokemon do jogador
 -(void)consultarPokemons{
     for (int i = 0; i < self.pokemons.count; i++) {

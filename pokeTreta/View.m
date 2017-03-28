@@ -15,7 +15,12 @@
 //Retorna: string.
 +(NSString*)lerString:(NSString*)msg{
 	@autoreleasepool {
-		NSLog(@"%@", msg);
+		if ([msg length] != 0) {
+			NSLog(@"%@", msg);
+		} else {
+			// Nothing to do
+		}
+		
 		return [[[NSString alloc] initWithData:[[NSFileHandle fileHandleWithStandardInput] availableData] encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 	}
 }

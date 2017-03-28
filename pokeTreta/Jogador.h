@@ -15,10 +15,10 @@
 @property NSString *nome;
 @property NSMutableArray *pokemons;
 
-
+#pragma mark - Constructor
 -(instancetype)initWithNome:(NSString *)nome;
 
-
+#pragma mark - Other Methods
 -(void)consultarPokemons;
 -(BOOL)capturarPokemon: (Pokemon*)poke;
 -(NSMutableArray*)getMelhoresPokemons;

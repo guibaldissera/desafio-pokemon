@@ -16,19 +16,20 @@
     
 }
 
+#pragma mark - Constructor
 - (instancetype)initWithNome: (NSString*)newNome withExp:(int) newExp withTipo: (NSString*) newTipo;
 
-//Getters
+#pragma mark - Get Methods
 -(NSString*)nome;
 -(int)exp;
 -(NSString*)tipo;
 
-//Setters
+#pragma mark - Set Methods
 -(void)setNome: (NSString*)currentNome;
 -(void)setExp: (int)currentExp;
 -(void)setTipo: (NSString*)currentTipo;
 
-//METODOS
+#pragma mark - Other Methods
 -(void)ganhaXp:(int)xpBatalha;
 -(int)getLevel:(int)xpTotal;
 -(void) apresentaPokemon;

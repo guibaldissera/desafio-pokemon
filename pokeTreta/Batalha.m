@@ -14,11 +14,10 @@
 
 @implementation Batalha
 
-
-
 @synthesize ginasio;
 @synthesize desafiante;
 
+#pragma mark - Constructor
 - (instancetype)initWithGinasio: (Ginasio*) newGinasio Desafiante: (Jogador*) newJogador
 {
     self = [super init];
@@ -28,6 +27,8 @@
     }
     return self;
 }
+
+#pragma mark - Other Methods
 
 //Inicia uma batalha entre um jogador desafiante e um jogador que e lider do ginasio
 -(Jogador*)batalharJogador{

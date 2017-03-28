@@ -15,9 +15,10 @@
 @property(retain) Jogador* jogador;
 @property(retain) NSString* nome;
 
-
+#pragma mark - Constructor
 - (instancetype)initWithNome: (NSString*)newNome Jogador:(Jogador*)newJogador;
 
+#pragma mark - Other Methods
 -(void)mudaJogadorLider: (Jogador*)lider;
 
 

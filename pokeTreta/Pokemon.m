@@ -10,7 +10,7 @@
 
 @implementation Pokemon
 
-
+#pragma mark - Constructor
 - (instancetype)initWithNome: (NSString*)newNome withExp:(int) newExp withTipo: (NSString*) newTipo{
     self = [super init];
     if (self) {
@@ -22,7 +22,7 @@
 }
 
 
-//Getters
+#pragma mark - Get Methods
 -(NSString*)nome{
     return nome;
 }
@@ -33,7 +33,7 @@
     return tipo;
 }
 
-//Setters
+#pragma mark - Set Methods
 -(void)setNome: (NSString*)currentNome{
     nome = currentNome;
 }
@@ -44,7 +44,7 @@
     tipo = currentTipo;
 }
 
-
+#pragma mark - Other Methods
 //Incrementa a xp definida ao pokemon
 -(void)ganhaXp:(int)xpBatalha{
     self.exp += xpBatalha;

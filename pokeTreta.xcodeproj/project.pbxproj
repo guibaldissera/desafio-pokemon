@@ -84,20 +84,68 @@
 		8A4119CF1E79E9DB004A704C /* entidades */ = {
 			isa = PBXGroup;
 			children = (
+				BD1C6E2E1E8AFEB8003BBE88 /* Jogo */,
+				BD1C6E2D1E8AFEB0003BBE88 /* Batalha */,
+				BD1C6E2C1E8AFEAB003BBE88 /* Ginasio */,
+				BD1C6E2A1E8AFE98003BBE88 /* Jogador */,
+				BD1C6E291E8AFE91003BBE88 /* Pokemon */,
+				BD1C6E281E8AFE84003BBE88 /* View */,
+			);
+			name = entidades;
+			sourceTree = "<group>";
+		};
+		BD1C6E281E8AFE84003BBE88 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				5971FB4C1E846DD800F0FE3A /* View.h */,
 				5971FB4A1E846DD000F0FE3A /* View.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BD1C6E291E8AFE91003BBE88 /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
 				8A4119D01E79EA1F004A704C /* Pokemon.h */,
 				8A4119D11E79EA1F004A704C /* Pokemon.m */,
+			);
+			name = Pokemon;
+			sourceTree = "<group>";
+		};
+		BD1C6E2A1E8AFE98003BBE88 /* Jogador */ = {
+			isa = PBXGroup;
+			children = (
 				8A4119D31E7C4DA8004A704C /* Jogador.h */,
 				8A4119D41E7C4DA8004A704C /* Jogador.m */,
+			);
+			name = Jogador;
+			sourceTree = "<group>";
+		};
+		BD1C6E2C1E8AFEAB003BBE88 /* Ginasio */ = {
+			isa = PBXGroup;
+			children = (
 				8A411A051E7C825C004A704C /* Ginasio.h */,
 				8A411A061E7C825C004A704C /* Ginasio.m */,
+			);
+			name = Ginasio;
+			sourceTree = "<group>";
+		};
+		BD1C6E2D1E8AFEB0003BBE88 /* Batalha */ = {
+			isa = PBXGroup;
+			children = (
 				8A411A081E7C8568004A704C /* Batalha.h */,
 				8A411A091E7C8568004A704C /* Batalha.m */,
+			);
+			name = Batalha;
+			sourceTree = "<group>";
+		};
+		BD1C6E2E1E8AFEB8003BBE88 /* Jogo */ = {
+			isa = PBXGroup;
+			children = (
 				BDDAC1FB1E843ABB003B82D7 /* Jogo.h */,
 				BDDAC1FC1E843ABB003B82D7 /* Jogo.m */,
 			);
-			name = entidades;
+			name = Jogo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

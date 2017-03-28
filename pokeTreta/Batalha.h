@@ -16,9 +16,12 @@
 @property(retain) Ginasio *ginasio;
 @property(retain) Jogador *desafiante;
 
+#pragma mark - Constructor
+- (instancetype)initWithGinasio: (Ginasio*) newGinasio Desafiante: (Jogador*) newJogador;
+
+#pragma mark - Other Methods
 -(Jogador*)batalharJogador;
 -(Pokemon*)dueloPokemon: (Pokemon*)poke1 desafiante:(Pokemon*)poke2;
 -(int)tipoPokemon: (NSString*)tipo1 ganhaDe:(NSString*)tipo2;
-- (instancetype)initWithGinasio: (Ginasio*) newGinasio Desafiante: (Jogador*) newJogador;
 
 @end

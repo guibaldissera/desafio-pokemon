@@ -7,24 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ProtocoloJogo.h"
 #import "Pokemon.h"
 #import "Jogador.h"
 #import "Batalha.h"
+#import "View.h"
 
-#define TIPO_AGUA "agua"
-#define TIPO_FOGO "fogo"
-#define TIPO_VENTO "vento"
-
-#define TIME_VERMELHO "vermelho"
-#define TIME_AZUL "azul"
-#define TIME_AMARELO "amarelo"
-
-@interface Jogo : NSObject
-
-@property NSMutableArray * pokemons;
-@property NSMutableArray * jogadores;
-@property NSMutableArray * ginasios;
-@property NSMutableArray * batalhas;
+@interface Jogo : NSObject <ProtocoloJogo>
 
 #pragma mark - Constructor
 - (instancetype)initWithInformacoes;
@@ -35,17 +24,11 @@
 
 #pragma mark - Control Menu Methods
 -(void) menuJogador;
--(void) jogar;
 
 #pragma mark - List Methods
--(void) listarPokemons;
--(void)listarJogadores;
--(void) listarJogadores2;
+-(void) listarOpcaoJogadores;
 
 #pragma mark - Create Itens Methods
--(void) criarPokemons;
--(void) criarJogadores;
--(void) criarGinasios;
 -(void) cadastrarJogador;
 -(Batalha* )preparaBatalha;
 

@@ -7,10 +7,6 @@
 //
 
 #import "Jogo.h"
-#import "Pokemon.h"
-#import "Jogador.h"
-#import "View.h"
-#import "Batalha.h"
 
 @implementation Jogo
 
@@ -69,7 +65,7 @@
 				
 				break;
 			case 3:
-				[self listarJogadores2];
+				[self listarJogadores];
 				break;
 			default:
 				break;
@@ -227,7 +223,7 @@
 //Objetivo: listar jogadores.
 //Parametro: array de jogadores.
 //Retorna: nenhum.
--(void)listarJogadores{
+-(void)listarOpcaoJogadores {
 	int i;
 	Jogador *auxPlayer = [[Jogador alloc]init];
 	
@@ -238,7 +234,7 @@
 	}
 }
 
--(void) listarJogadores2 {
+-(void) listarJogadores {
 	for (Jogador * j in _jogadores) {
 		[j apresentaJogadores];
 	}
@@ -261,7 +257,7 @@
 	
 	int id;
 	
-	[self listarJogadores];
+	[self listarOpcaoJogadores];
 	id = [View lerInteiro:@"Informe o id do jogador: \n"];
 	
 	return _jogadores[id-1];

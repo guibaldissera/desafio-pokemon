@@ -10,6 +10,10 @@
 
 @implementation Pokemon
 
+@synthesize nome = _nome;
+@synthesize tipo = _tipo;
+@synthesize exp = _exp;
+
 #pragma mark - Constructor
 - (instancetype)initWithNome: (NSString*)newNome withExp:(int) newExp withTipo: (NSString*) newTipo{
     self = [super init];
@@ -19,29 +23,6 @@
         self.exp = newExp;
     }
     return self;
-}
-
-
-#pragma mark - Get Methods
--(NSString*)nome{
-    return nome;
-}
--(int)exp{
-    return exp;
-}
--(NSString*)tipo{
-    return tipo;
-}
-
-#pragma mark - Set Methods
--(void)setNome: (NSString*)currentNome{
-    nome = currentNome;
-}
--(void)setExp: (int)currentExp{
-    exp = currentExp;
-}
--(void)setTipo: (NSString*)currentTipo{
-    tipo = currentTipo;
 }
 
 #pragma mark - Other Methods
@@ -58,8 +39,11 @@
 
 
 //Apresenta textualmente todos os atributos do objeto pokemon
--(void)apresentaPokemon{
-    NSLog(@"Nome: %@\nExperiencia: %d\nTipo: %@\nLevel: %d", self.nome, self.exp, self.tipo, [self getLevel:self.exp]);
+-(void)apresentaPokemon {
+    printf("Nome: %s\nExperiencia: %d\nTipo: %s\nLevel: %d\n", [self.nome cStringUsingEncoding:NSUTF8StringEncoding], self.exp, [self.tipo cStringUsingEncoding:NSUTF8StringEncoding], [self getLevel:self.exp]);
+}
+-(void)apresentaPokemonBatalha:(int)index {
+	printf("Pokemon %d - %s - %s - level %d\n", index, [self.nome cStringUsingEncoding:NSUTF8StringEncoding], [self.tipo cStringUsingEncoding:NSUTF8StringEncoding], [self getLevel:self.exp]);
 }
 
 @end

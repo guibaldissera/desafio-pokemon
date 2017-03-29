@@ -16,7 +16,7 @@
 +(NSString*)lerString:(NSString*)msg{
 	@autoreleasepool {
 		if ([msg length] != 0) {
-			NSLog(@"%@", msg);
+			printf("%s", [msg cStringUsingEncoding:NSUTF8StringEncoding]);
 		} else {
 			// Nothing to do
 		}
@@ -32,7 +32,7 @@
 +(int)lerInteiro:(NSString*) msg{
     
     int valor;
-    NSLog(@"%@",msg);
+    printf("%s", [msg cStringUsingEncoding:NSUTF8StringEncoding]);
     fflush(stdin);
     scanf("%d",&valor);
     fflush(stdin);
